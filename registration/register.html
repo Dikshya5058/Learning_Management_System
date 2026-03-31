@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-links">
+            <a href="../login/login.html" class="nav-login">Log in</a>
+            <a href="register.html" class="nav-signup active">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- Main container -->
+    <main class="signup-container">
+        <div class="hero-text">
+            <h1>Sign up for <span>LMS</span></h1>
+            <p>Your library catalog is available anywhere, anytime.</p>
+        </div>
+
+        <div class="registration-box">
+            <h3>Account Information:</h3>
+
+            <form action="register.php" method="POST">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <div class="field-error">
+                        <script>
+                            const params = new URLSearchParams(window.location.search);
+                            if (params.get("error") === "email") {
+                                document.write("Email already exists. Please use a different email.");
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <input type="submit" value="Sign Up" class="btn-submit">
+            </form>
+
+            <div class="login-link">
+                Already have an account? <a href="../login/login.html">Login here</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
