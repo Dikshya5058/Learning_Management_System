@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS | Admin Login</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div id="loginPage" class="container">
+        <div class="login-card">
+            <h1>Admin Login</h1>
+            <p>Welcome back! Please enter your details.</p>
+            
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="loginEmail" placeholder="admin@lms.com">
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="••••••••">
+            </div>
+
+            <p id="loginError" style="color: #ff6b6b; font-size: 0.9rem;"></p>
+
+            <button class="btn-primary" onclick="login()">Sign In</button>
+        </div>
+    </div>
+
+    <div id="dashboard" class="container" style="display: none;">
+        <nav class="navbar">
+            <h2>LMS Dashboard</h2>
+            <button class="btn-outline" onclick="logout()">Logout</button>
+        </nav>
+        
+        <div class="content">
+            <h3>Welcome, Administrator</h3>
+            <p>You are now logged in to the Learning Management System.</p>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
