@@ -30,13 +30,13 @@ nav {
     background: #fff;
 }
 
-/* Active page highlight */
+/* Active page */
 .nav-links a.active {
     background: #3cb1c5;
     color: #fff !important;
 }
 
-/* Hover effects */
+/* Hover */
 .nav-login:hover,
 .nav-signup:hover {
     background: #2e8d9e;
@@ -51,16 +51,26 @@ nav {
     margin-top: 50px;
 }
 
+/* Hero */
 .hero-text {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.hero-text h1 { font-size: 42px; margin-bottom: 5px; }
-.hero-text h1 span { color: #333; }
-.hero-text p { color: #666; }
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
 
-/* Registration box */
+.hero-text h1 span {
+    color: #333;
+}
+
+.hero-text p {
+    color: #666;
+}
+
+/* Card */
 .registration-box {
     background: #fff;
     width: 100%;
@@ -69,6 +79,11 @@ nav {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border: 1px solid #eee;
+    transition: transform 0.2s ease;
+}
+
+.registration-box:hover {
+    transform: translateY(-2px);
 }
 
 .registration-box h3 {
@@ -76,7 +91,7 @@ nav {
     font-size: 18px;
 }
 
-/* Form elements */
+/* Form */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -100,7 +115,14 @@ input[type="password"] {
     font-size: 14px;
 }
 
-/* Submit button */
+/* Focus effect */
+input:focus {
+    outline: none;
+    border-color: #3cb1c5;
+    background: #fff;
+}
+
+/* Button */
 .btn-submit {
     background-color: #3cb1c5;
     color: white;
@@ -110,9 +132,12 @@ input[type="password"] {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
-.btn-submit:hover { background-color: #2e8d9e; }
+.btn-submit:hover {
+    background-color: #2e8d9e;
+}
 
 /* Bottom link */
 .login-link {
@@ -127,10 +152,16 @@ input[type="password"] {
     font-weight: 600;
 }
 
-/* Email error */
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error */
 .field-error {
     color: #e63946;
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 6px;
+    margin-bottom: 5px;
     font-weight: 500;
 }
+
