@@ -3,108 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Hub - Modern Library Management System</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Learning Hub</title>
+
+<style>
+:root {
+    --primary: #3cb1c5; /* This matches your requested color */
+    --primary-dark: #357abd;
+    --bg: #f7faff;
+    --text: #1a1a1a;
+    --subtext: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.nav-auth {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    /* Updated shadow to match the new primary color */
+    box-shadow: 0 8px 20px rgba(60, 177, 197, 0.3); 
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.hero p {
+    margin: 20px 0 30px;
+    color: var(--subtext);
+    font-size: 18px;
+}
+
+.features {
+    padding: 80px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #eef2f7;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(74,144,226,0.15);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--subtext);
+    font-size: 14px;
+}
+
+/* MODIFIED PART: Background changed to flat #3cb1c5 */
+.cta {
+    background: var(--primary); /* Uses #3cb1c5 */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 40px 40px 0 0;
+    margin-top: 60px;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+    color: #eaf3ff;
+}
+
+/* CTA BUTTON SPECIFIC: Matching the button color in your screenshot */
+.cta .btn-primary {
+    background: #56c2d6; /* Slightly lighter teal to stand out against the background */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #777;
+}
+</style>
+
 </head>
+
 <body>
 
 <nav class="navbar">
-    <div class="logo">
-        <div class="logo-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-        </div>
-        <div class="logo-text">
-            <span class="brand-name">Learning Hub</span>
-            <span class="brand-sub">Modern Library Management System</span>
-        </div>
-    </div>
-    <div class="nav-links">
-        <a href="login.php" class="nav-signin-btn">Log In</a>
-        <a href="register.php" class="nav-getstarted-btn">Sign Up</a>
+    <div class="logo">Learning Hub</div>
+    <div class="nav-auth">
+        <a href="login.php" class="btn btn-outline">Log In</a>
+        <a href="register.php" class="btn btn-primary">Sign Up</a>
     </div>
 </nav>
 
-<header class="hero-section">
-    <h1>Your Digital Learning Library</h1>
-    <p>A comprehensive Learning Management System for borrowing, reading, and managing books online. Powered by AI for personalized recommendations.</p>
-    <div class="hero-actions">
-        <a href="register.php" class="btn-create-acc">Create Account</a>
-        <a href="javascript:void(0);" class="btn-admin-access" style="cursor: not-allowed; opacity: 0.6;">Admin Access</a>
-    </div>
-</header>
-
-<section class="features-section">
-    <h2 class="section-title">Key Features</h2>
-    <div class="features-grid">
-        <div class="feature-item">
-            <div class="feat-icon blue-bg">🔍</div>
-            <h3>Smart Search</h3>
-            <p>Advanced search and filtering to find exactly what you need. Search by title, author, or category.</p>
-        </div>
-        <div class="feature-item">
-            <div class="feat-icon orange-bg">📖</div>
-            <h3>Read Online</h3>
-            <p>Read books directly in your browser with our digital reader. Adjust zoom and navigate easily.</p>
-        </div>
-        <div class="feature-item">
-            <div class="feat-icon light-blue-bg">📈</div>
-            <h3>AI Recommendations</h3>
-            <p>Get personalized book recommendations based on your reading history and preferences.</p>
-        </div>
-        <div class="feature-item">
-            <div class="feat-icon light-orange-bg">💬</div>
-            <h3>AI Chatbot</h3>
-            <p>24/7 AI assistant to help you find books, check due dates, and answer questions.</p>
-        </div>
-    </div>
+<section class="hero">
+    <h1>Smart Digital Library</h1>
+    <p>Discover, borrow, and manage books with ease.</p>
+    <a href="register.php" class="btn btn-primary">Get Started</a>
 </section>
 
-<section class="how-works-section">
-    <h2 class="section-title">How It Works</h2>
-    <div class="steps-container">
-        <div class="step-card">
-            <div class="step-num step-blue">1</div>
-            <h3>Create Account</h3>
-            <p>Sign up for free and get instant access to our entire digital library catalog.</p>
-        </div>
-        <div class="step-card">
-            <div class="step-num step-orange">2</div>
-            <h3>Browse & Borrow</h3>
-            <p>Search our collection, borrow books you like, and keep them for up to 14 days.</p>
-        </div>
-        <div class="step-card">
-            <div class="step-num step-dark">3</div>
-            <h3>Read & Learn</h3>
-            <p>Read online or download for offline access. Return when done and borrow more!</p>
-        </div>
+<section class="features">
+    <h2>What You Can Do</h2>
+
+<div class="grid">
+
+    <div class="card">
+        <div class="icon">📚</div>
+        <h3>Browse Books</h3>
+        <p>Explore available books in different categories.</p>
     </div>
+
+    <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Borrow Instantly</h3>
+        <p>Borrow books easily with automatic due dates.</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">📅</div>
+        <h3>Track Books</h3>
+        <p>Monitor borrowed books and return dates.</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">📖</div>
+        <h3>Read Online</h3>
+        <p>Access reading features anytime.</p>
+    </div>
+
+</div>
+
 </section>
 
-<section class="demo-box-container">
-    <div class="demo-card">
-        <h2>Try It Now - Demo Credentials</h2>
-        <p>Use these credentials to explore the system</p>
-        <div class="demo-flex">
-            <div class="demo-item user-cred">
-                <strong>User Account</strong>
-                <p>Email: user@test.com</p>
-                <p>Password: user123</p>
-                <a href="login.php" class="demo-login-btn user-btn">Login as User</a>
-            </div>
-            <div class="demo-item admin-cred">
-                <strong>Admin Account</strong>
-                <p>Email: admin@test.com</p>
-                <p>Password: admin123</p>
-                <a href="javascript:void(0);" class="demo-login-btn admin-btn" style="cursor: not-allowed; opacity: 0.6;">Login as Admin</a>
-            </div>
-        </div>
-    </div>
+<section class="cta">
+    <h2>Start Your Learning Journey</h2>
+    <p>Create your account and explore your library today.</p>
+    <a href="register.php" class="btn btn-primary">Create Account</a>
 </section>
 
-<footer class="main-footer">
-    <p>© 2026 Learning Hub - Modern Library Management System</p>
-    <p>Built with PHP and MySQL</p>
+<footer>
+    © 2026 Learning Hub - Library Management System
 </footer>
 
 </body>
