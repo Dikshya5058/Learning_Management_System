@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- Navbar -->
 <nav>
     <div class="nav-links">
-        <a href="../public/login.php" class="nav-login">Log in</a>
+        <a href="login.php" class="nav-login">Log In</a>
         <a href="register.php" class="nav-signup active">Sign Up</a>
     </div>
 </nav>
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
 
         <div class="login-link">
-            Already have an account? <a href="../public/login.php">Login here</a>
+            Already have an account? <a href="login.php">Login here</a>
         </div>
     </div>
 </main>
