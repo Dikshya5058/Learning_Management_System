@@ -1,0 +1,98 @@
+/* 1. Global Reset */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4eeff; /* Simplified to a soft pastel base */
+    color: #444;
+}
+
+/* 2. Login Page (Centered Layout) */
+.container {
+    display: grid;
+    place-items: center; /* Simplest way to center everything */
+    min-height: 100vh;
+}
+
+.login-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 300px;
+    text-align: center;
+}
+
+/* 3. Form Elements */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+}
+
+button {
+    background: #dcd6f7;
+    color: #6a5acd;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cfc7f5;
+}
+
+/* 4. Dashboard Layout */
+.dashboard-wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.admin-header {
+    background: #4facfe;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-btn-header {
+    background: #fff;
+    color: #333;
+    width: auto;
+    padding: 5px 15px;
+}
+
+/* 5. Grid for Stats & Actions */
+.stats-grid, .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-card, .action-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #eee;
+}
+
+.primary-action {
+    background: #ff8a65;
+    color: #fff;
+    border: none;
+}
+
+#loginError {
+    color: #ff6b6b;
+    font-size: 14px;
+}
+
