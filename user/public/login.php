@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Successful login
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['name'];
-            header("Location: ../dashboard/dashboard.php");
+            header("Location: ../public/dashboard.php");
             exit();
         } else {
             $login_error = "Invalid email or password. Please try again.";
@@ -42,8 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <nav>
     <div class="nav-links">
-        <a href="login.php" class="nav-login active">Log in</a>
-        <a href="../public/register.php" class="nav-signup">Sign Up</a>
+        <a href="login.php" class="nav-login active">Log In</a>
+        <a href="register.php" class="nav-signup">Sign Up</a>
     </div>
 </nav>
 
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
 
         <div class="login-link">
-            Don't have an account? <a href="../public/register.php">Sign up</a>
+            Don't have an account? <a href="register.php">Sign up</a>
         </div>
     </div>
 
