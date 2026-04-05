@@ -20,12 +20,12 @@ if (isset($_POST['add_book'])) {
         try {
             $stmt = $pdo->prepare("INSERT INTO books (title, author, category, content) VALUES (?, ?, ?, ?)");
             $stmt->execute([$title, $author, $category, $content]);
-            $success = "✅ Book added successfully!";
+            $success = " Book added successfully!";
         } catch (PDOException $e) {
-            $error = "❌ Error: " . $e->getMessage();
+            $error = " Error: " . $e->getMessage();
         }
     } else {
-        $error = "❌ All fields are required.";
+        $error = " All fields are required.";
     }
 }
 ?>
@@ -43,7 +43,7 @@ if (isset($_POST['add_book'])) {
 </head>
 <body>
     <div class="form-card">
-        <h2>➕ Add New Book</h2>
+        <h2> Add New Book</h2>
         <?php if($success) echo "<p style='color:green'>$success</p>"; ?>
         <?php if($error) echo "<p style='color:red'>$error</p>"; ?>
         <form method="POST">
